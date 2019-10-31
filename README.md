@@ -13,3 +13,8 @@ POSTECH 개발 동아리 'PoApper'에서 진행하는 IOS 강의용 repository �
 ### Choose Lecture
 
 ## Curriculum
+- 로그인 / 회원가입
+- 글 목록
+- 글 정렬
+- 글 검색
+- 글 필터
