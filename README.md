@@ -35,7 +35,6 @@ lecture01에서는 로그인 / 회원가입 기능을 구현할 것입니다. �
 
 - MVC Design Pattern
 - Navigation Structure
-- Thread
 
 #### 요구사항
 
@@ -47,6 +46,7 @@ lecture01에서는 로그인 / 회원가입 기능을 구현할 것입니다. �
   - 아이디, 비밀번호 입력칸과 로그인, 회원 가입 버튼이 필요합니다.
   - 로그인이 성공하면 메인화면으로 이동합니다. 기존의 화면은 없앱니다.
   - 로그인이 실패하면 경고 메시지를 띄웁니다.
+  - 로그인은 hard-code 된 아이디와 비밀번호로 진행합니다.
   - 회원 가입 버튼을 누르면 회원 가입 화면으로 넘어갑니다.
 - 회원 가입
   - 아이디, 비밀번호 입력칸과 가입 버튼이 필요합니다.
@@ -61,5 +61,3 @@ lecture01에서는 로그인 / 회원가입 기능을 구현할 것입니다. �
 - [MVC](https://opentutorials.org/course/697/3828)
 - [UI 기초](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)
 - [Navigation Structure](https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/navigation/)
-- [URL Session](https://kka7.tistory.com/95)
-- [AlamoFire](https://devmjun.github.io/archive/Alamofire)
