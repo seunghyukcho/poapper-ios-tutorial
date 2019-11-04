@@ -10,25 +10,50 @@ import SwiftUI
 
 struct SignInView: View {
     @EnvironmentObject var user: UserData
+    @Environment(\.presentationMode) var presentation
+    @State var id = ""
+    @State var password = ""
+    @State var signInSuccess: Bool? = nil
+    @State var signInFailed = false
     
     var body: some View {
-        VStack {
-            TextField("ID", text: $user.name)
-                .padding(.all)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            SecureField("Password", text: $user.password)
-                .padding([.leading, .bottom, .trailing])
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            HStack {
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Text("Sign In")
-                        .padding()
-                }
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Text("Sign Up")
-                        .padding()
+        NavigationView {
+            VStack {
+                TextField("ID", text: $id)
+                    .padding(.all)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .autocapitalization(UITextAutocapitalizationType.none)
+                
+                SecureField("Password", text: $password)
+                    .padding([.leading, .bottom, .trailing])
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .autocapitalization(UITextAutocapitalizationType.none)
+                
+                HStack {
+                    NavigationLink(destination: BulletinBoardView().environmentObject(user),
+                                   tag: true, selection: $signInSuccess) {
+                                    Button("Sign In") {
+                                        if(self.id == "root" && self.password == "123456789q") {
+                                            self.presentation.wrappedValue.dismiss()
+                                            self.user.name = "조승혁"
+                                            self.user.age = 22
+                                            self.signInSuccess = true
+                                        } else {
+                                            self.signInFailed = true
+                                        }
+                                    }.padding()
+                    }
+                    
+                    NavigationLink(destination: SignUpView()) {
+                        Text("Sign Up")
+                            .padding()
+                    }
                 }
             }
+        }.alert(isPresented: $signInFailed) {
+            Alert(title: Text("Warning"),
+                  message: Text("Invalid id or password"),
+                  dismissButton: .default(Text("Ok")))
         }
     }
 }
@@ -36,6 +61,5 @@ struct SignInView: View {
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView()
-            .environmentObject(UserData())
     }
 }

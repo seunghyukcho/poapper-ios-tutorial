@@ -9,13 +9,19 @@
 import SwiftUI
 
 struct BulletinBoardView: View {
+    @EnvironmentObject var user: UserData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(user.name)
+            Text(String(user.age))
+        }.navigationBarBackButtonHidden(true)
     }
 }
 
 struct BulletinBoardView_Previews: PreviewProvider {
     static var previews: some View {
         BulletinBoardView()
+            .environmentObject(UserData())
     }
 }

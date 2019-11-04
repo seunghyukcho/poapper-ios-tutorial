@@ -11,5 +11,5 @@ import Combine
 
 final class UserData: ObservableObject {
     @Published var name = ""
-    @Published var password = ""
+    @Published var age = 0
 }
