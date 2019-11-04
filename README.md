@@ -61,3 +61,5 @@ lecture01에서는 로그인 / 회원가입 기능을 구현할 것입니다. �
 - [MVC](https://opentutorials.org/course/697/3828)
 - [UI 기초](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)
 - [Navigation Structure](https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/navigation/)
+- [Binding](https://developer.apple.com/documentation/swiftui/binding)
+- [Environment Object](https://developer.apple.com/tutorials/swiftui/handling-user-input)
