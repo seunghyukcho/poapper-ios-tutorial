@@ -10,6 +10,6 @@ import SwiftUI
 import Combine
 
 final class UserData: ObservableObject {
-    @Published var name = ""
-    @Published var age = 0
+    @Published var name: String? = nil
+    @Published var age: Int? = nil
 }

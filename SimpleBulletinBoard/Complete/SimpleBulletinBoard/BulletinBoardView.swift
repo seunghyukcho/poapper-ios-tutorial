@@ -10,12 +10,19 @@ import SwiftUI
 
 struct BulletinBoardView: View {
     @EnvironmentObject var user: UserData
+    @ObservedObject var posts = PostList()
     
     var body: some View {
         VStack {
-            Text(user.name)
-            Text(String(user.age))
+            List {
+                ForEach(posts.posts) { post in
+                    NavigationLink(destination: PostDetail(post: post)) {
+                        PostRow(post: post)
+                    }
+                }
+            }
         }.navigationBarBackButtonHidden(true)
+            .navigationBarTitle("게시판")
     }
 }
 
