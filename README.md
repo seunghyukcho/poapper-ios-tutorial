@@ -36,8 +36,8 @@ git checkout -t origin/lecture01
 	- Observable Object
 2. 글 목록
     - ListView
-	- Animation
+    - 즐겨찾기
 3. 글 필터 / 정렬 / 검색
 4. 백엔드 연결
     - URLSession
-	- Alamofire
+    - Alamofire
