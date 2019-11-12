@@ -1,43 +1,30 @@
-# IOS Tutorial
-POSTECH 개발 동아리 'PoApper'에서 진행하는 IOS 강의용 repository 입니다. 
+# Lecture02
 
-## Prerequisite
-- MacOS
-- Git
-- Swift : https://docs.swift.org/swift-book/index.html
-- IDE : [XCode](https://developer.apple.com/kr/xcode/) or [AppCode](https://www.jetbrains.com/objc/)
-- Basic UI : https://developer.apple.com/tutorials/swiftui/creating-and-combining-views
+lecture02에서는 게시판의 글 목록, 글의 상세 정보를 확인할 수 있는 기능을 구현할 것 입니다. 그러면서 다음과 같은 내용들을 익힐 것 입니다.
 
-## Getting Started
-### Download
+- ListView
+- EnvironmentObject
+- NavigationBar
 
-원하는 폴더에 다음 명령어를 칩니다.
+## 요구사항
 
-```bash
-git clone https://github.com/shhj1998/poapper-ios-tutorial.git
-cd poapper-ios-tutorial
-```
+- 글의 schema는 다음과 같습니다.
+  - id : 고유번호
+  - title : 글 제목
+  - author : 작성자
+  - content : 글 내용
+- 글의 내용을 확인할 수 있는 화면이 필요합니다.
+  - 상단에 제목과 작성자, 그리고 밑에는 글의 내용이 보이면 됩니다.
+  - 글의 내용이 길면, scroll이 될 수 있도록 해야 합니다.
+- 메인 화면(BulletinBoardView)는 글 목록을 보여줘야 합니다.
+  - 글 목록은 글 제목, 작성자만 보여주면 됩니다.
+  - 클릭하면, 상세보기 화면으로 넘어가야 합니다.
+  - 마찬가지로 scroll이 돼야 합니다.
 
-### Choose Lecture
 
-만약 내가 하고 싶은 강의가 `lecture01`이면, `poapper-ios-tutorial` 폴더에서 다음 명령어를 칩니다.
 
-```bash
-git checkout -t origin/lecture01
-```
+## 참고 문헌
 
-그러면 `SimpleBulletinBoard` 프로젝트가 `lecture01 ` 에 맞춰서 바뀌어져 있을 겁니다. 이제 `SimpleBulletinBoard` 프로젝트를 xcode로 열어서 진행하시면 됩니다. 강의 목록은 github의 branch 목록을 확인하시면 됩니다.
+- [List](https://developer.apple.com/documentation/swiftui/list)
+- [ListView 예제](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)
 
-## Curriculum
-
-1. 로그인 / 회원가입
-    - SwiftUI
-	- NavigationView
-	- Observable Object
-2. 글 목록
-    - ListView
-	- Animation
-3. 글 필터 / 정렬 / 검색
-4. 백엔드 연결
-    - URLSession
-	- Alamofire
