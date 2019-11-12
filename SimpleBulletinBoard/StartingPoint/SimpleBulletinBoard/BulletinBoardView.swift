@@ -14,15 +14,8 @@ struct BulletinBoardView: View {
     
     var body: some View {
         VStack {
-            List {
-                ForEach(posts.posts) { post in
-                    NavigationLink(destination: PostDetail(post: post)) {
-                        PostRow(post: post)
-                    }
-                }
-            }
+            Text("hello, world!")
         }.navigationBarBackButtonHidden(true)
-            .navigationBarTitle("게시판")
     }
 }
 
