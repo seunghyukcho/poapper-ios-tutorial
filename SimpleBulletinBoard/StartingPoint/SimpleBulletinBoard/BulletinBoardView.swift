@@ -10,11 +10,11 @@ import SwiftUI
 
 struct BulletinBoardView: View {
     @EnvironmentObject var user: UserData
+    @ObservedObject var posts = PostList()
     
     var body: some View {
         VStack {
-            Text(user.name)
-            Text(String(user.age))
+            Text("hello, world!")
         }.navigationBarBackButtonHidden(true)
     }
 }

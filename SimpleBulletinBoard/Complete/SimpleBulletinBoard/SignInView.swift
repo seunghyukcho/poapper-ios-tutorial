@@ -34,7 +34,6 @@ struct SignInView: View {
                                    tag: true, selection: $signInSuccess) {
                                     Button("Sign In") {
                                         if(self.id == "root" && self.password == "123456789q") {
-                                            self.presentation.wrappedValue.dismiss()
                                             self.user.name = "조승혁"
                                             self.user.age = 22
                                             self.signInSuccess = true

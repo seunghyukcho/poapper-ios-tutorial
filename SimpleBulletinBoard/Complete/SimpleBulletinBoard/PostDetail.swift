@@ -12,15 +12,12 @@ struct PostDetail: View {
     var post: Post
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
+        ScrollView {
+            VStack(alignment: .leading) {
                 Text(post.author)
-                Spacer()
+                Divider()
+                Text(post.content)
             }
-            Divider()
-            Text(post.content)
-                .lineLimit(nil)
-            Spacer()
         }.padding()
             .navigationBarTitle(post.title)
     }

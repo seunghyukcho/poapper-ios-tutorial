@@ -16,6 +16,7 @@
 		99A69CEE236FE9EA00E3B252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A69CED236FE9EA00E3B252 /* Assets.xcassets */; };
 		99A69CF1236FE9EA00E3B252 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A69CF0236FE9EA00E3B252 /* Preview Assets.xcassets */; };
 		99A69CF4236FE9EA00E3B252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A69CF2236FE9EA00E3B252 /* LaunchScreen.storyboard */; };
+		99E4571E2379256400F827F4 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E4571D2379256400F827F4 /* PostModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		99A69CF0236FE9EA00E3B252 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		99A69CF3236FE9EA00E3B252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99A69CF5236FE9EA00E3B252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99E4571D2379256400F827F4 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				99293123237028FD00D3A329 /* UserData.swift */,
+				99E4571D2379256400F827F4 /* PostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				996F3E17237046D600C9446D /* BulletinBoardView.swift in Sources */,
 				99A69CE8236FE9E500E3B252 /* AppDelegate.swift in Sources */,
 				99A69CEA236FE9E500E3B252 /* SceneDelegate.swift in Sources */,
+				99E4571E2379256400F827F4 /* PostModel.swift in Sources */,
 				99293124237028FD00D3A329 /* UserData.swift in Sources */,
 				996F3E19237046E900C9446D /* SignUpView.swift in Sources */,
 				99A69CEC236FE9E500E3B252 /* SignInView.swift in Sources */,
